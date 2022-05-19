@@ -1,7 +1,9 @@
-﻿public interface IJsonProvider
+﻿namespace ConsoleApp
 {
-   
-    TEvent DeserializeObject<TEvent>(string serializedEvent, string eventType);
+    public interface IJsonProvider
+    {
+        TEvent DeserializeObject<TEvent>(string serializedEvent, string eventType);
 
-    string SerializeObject<TEvent>(TEvent domainEvent);
+        string SerializeObject<TEvent>(TEvent domainEvent);
+    }
 }

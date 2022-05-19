@@ -1,0 +1,29 @@
+[
+  {
+    "Title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Url": "http://evt.com",
+    "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Type": {
+      "Value": 1,
+      "Name": "Created"
+    },
+    "AggregateId": "6ba4a571-72fd-49a8-9034-82c9b25b5f19",
+    "EventId": "afc40175-796c-4922-ad65-c3b3e55eaae5",
+    "AggregateVersion": 0,
+    "OcurrendOn": "2022-05-19T09:43:28.7159415Z"
+  },
+
+  {
+    "Title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Url": "http://evt.com",
+    "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\u0027s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+    "Type": {
+      "Value": 1,
+      "Name": "Created"
+    },
+    "AggregateId": "6ba4a571-72fd-49a8-9034-82c9b25b5f19",
+    "EventId": "4c26e257-7ab9-4bc4-b003-55204cfa3de8",
+    "AggregateVersion": 0,
+    "OcurrendOn": "2022-05-19T09:43:28.7757708Z"
+  }
+]

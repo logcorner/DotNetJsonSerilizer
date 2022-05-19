@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp // Note: actual namespace depends on the project name.
+﻿namespace ConsoleApp
 {
     internal class Program
     {
@@ -19,8 +19,6 @@
 
             //   Serialize using System.Text.Json ==>  good
             var JsonDotNetSerializedString = JsonDotNetProvider.SerializeObject<IDomainEvent>(domainEvent);
-            Console.WriteLine("Serialize using Newtonsoft.Json :JsonNewtonsoftString =", JsonNewtonsoftSerializedString);
-            Console.WriteLine("Serialize using System.Text.Json :JsonDotNetProviderString =", JsonDotNetSerializedString);
 
             string? assemblyQualifiedName = domainEvent.GetType().AssemblyQualifiedName;
             //   Deserialize using Newtonsoft.Json ==>  good

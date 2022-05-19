@@ -1,14 +1,16 @@
-﻿
-public abstract class Event : IDomainEvent
+﻿namespace ConsoleApp
 {
-    public Guid AggregateId { get; protected set; }
-
-    public Guid EventId => Guid.NewGuid();
-    public long AggregateVersion { get; private set; }
-    public DateTime OcurrendOn => DateTime.UtcNow;
-
-    public void BuildVersion(long aggregateVersion)
+    public abstract class Event : IDomainEvent
     {
-        AggregateVersion = aggregateVersion;
+        public Guid AggregateId { get; protected set; }
+
+        public Guid EventId => Guid.NewGuid();
+        public long AggregateVersion { get; private set; }
+        public DateTime OcurrendOn => DateTime.UtcNow;
+
+        public void BuildVersion(long aggregateVersion)
+        {
+            AggregateVersion = aggregateVersion;
+        }
     }
 }

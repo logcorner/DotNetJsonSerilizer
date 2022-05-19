@@ -4,7 +4,6 @@ namespace ConsoleApp
 {
     public class JsonDotNetProvider : IJsonProvider
     {
-
         public TEvent DeserializeObject<TEvent>(string serializedEvent, string eventType)
         {
             JsonSerializerOptions settings = new JsonSerializerOptions

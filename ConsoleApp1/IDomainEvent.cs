@@ -1,8 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-public interface IDomainEvent
+﻿namespace ConsoleApp
 {
-    Guid EventId { get; }
-    long AggregateVersion { get; }
+    public interface IDomainEvent
+    {
+        Guid EventId { get; }
+        long AggregateVersion { get; }
 
-    void BuildVersion(long aggregateVersion);
+        void BuildVersion(long aggregateVersion);
+    }
 }
