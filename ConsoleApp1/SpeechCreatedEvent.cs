@@ -7,10 +7,10 @@
         public string Description { get; }
         public SpeechTypeEnum Type { get; }
 
-        public SpeechCreatedEvent(Guid id, string title, string url,
+        public SpeechCreatedEvent(Guid aggregateId, string title, string url,
             string description, SpeechTypeEnum type)
         {
-            AggregateId = id;
+            AggregateId = aggregateId;
             Title = title;
             Url = url;
             Description = description;

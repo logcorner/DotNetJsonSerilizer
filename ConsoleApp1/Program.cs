@@ -2,8 +2,8 @@
 {
     internal class Program
     {
-        private static IJsonProvider JsonDotNetProvider = new JsonDotNetProvider();
-        private static IJsonProvider JsonNewtonsoftProvider = new JsonNewtonsoftProvider();
+        private static IJsonProvider _jsonDotNetProvider = new JsonDotNetProvider();
+        private static IJsonProvider _jsonNewtonsoftProvider = new JsonNewtonsoftProvider();
 
         private static void Main(string[] args)
         {
@@ -15,17 +15,17 @@
                 );
 
             //   Serialize using Newtonsoft.Json ==>  good
-            var JsonNewtonsoftSerializedString = JsonNewtonsoftProvider.SerializeObject<IDomainEvent>(domainEvent);
+            var jsonNewtonsoftSerializedString = _jsonNewtonsoftProvider.SerializeObject<IDomainEvent>(domainEvent);
 
             //   Serialize using System.Text.Json ==>  good
-            var JsonDotNetSerializedString = JsonDotNetProvider.SerializeObject<IDomainEvent>(domainEvent);
+            var jsonDotNetSerializedString = _jsonDotNetProvider.SerializeObject<IDomainEvent>(domainEvent);
 
             string? assemblyQualifiedName = domainEvent.GetType().AssemblyQualifiedName;
             //   Deserialize using Newtonsoft.Json ==>  good
-            var SpeechCreatedEventDeserializeWithNewtonsoft = JsonNewtonsoftProvider.DeserializeObject<SpeechCreatedEvent>(JsonNewtonsoftSerializedString, assemblyQualifiedName);
+            var speechCreatedEventDeserializeWithNewtonsoft = _jsonNewtonsoftProvider.DeserializeObject<SpeechCreatedEvent>(jsonNewtonsoftSerializedString, assemblyQualifiedName);
 
             //   Deserialize using System.Text.Json ==>  throw exception
-            var SpeechCreatedEventDeserializeWithJsonDotNet = JsonDotNetProvider.DeserializeObject<SpeechCreatedEvent>(JsonDotNetSerializedString, assemblyQualifiedName);
+            var speechCreatedEventDeserializeWithJsonDotNet = _jsonDotNetProvider.DeserializeObject<SpeechCreatedEvent>(jsonDotNetSerializedString, assemblyQualifiedName);
         }
     }
 }
